@@ -1,0 +1,13 @@
+<html>
+<head>
+	<title>signup page</title>
+</head>
+<body>
+	<form name="myf" action="/savesignup/" method="POST">  <!--{% csrf_token %}-->
+		Customer Id:<input type="text" name="customerid" unique=True required><br>
+		Customer Name<input type="text" name="customername"><br>
+		Password:<input type="password" name="apassword" required><br>
+		<input type="submit">
+	</form>
+</body>
+</html>

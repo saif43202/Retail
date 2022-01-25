@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Show products</title>
+	{% load static %}
+</head>
+<body>
+	{% csrf_token %}
+	<center>
+	<h1> Product Details </h1>
+	<hr>
+	<table border="1">
+		<tr>
+			<th>Product Id </th>
+			<th>Product Name </th>
+			<th>Product Prize </th>
+			<th>Product Discription </th>
+		</tr>
+		{% for i in Product %}
+		<tr>
+			<td>{{i.product_id}}</td>
+			<td>{{i.product_name}}</td>
+			<td>{{i.product_prize}}</td>
+			<td>{{i.product_discription}}</td>
+		</tr>
+		{% endfor %}
+	</table>
+</center>
+</body>
+</html>
